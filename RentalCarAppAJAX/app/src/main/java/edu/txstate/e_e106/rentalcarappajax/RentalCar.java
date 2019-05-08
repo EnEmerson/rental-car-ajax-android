@@ -72,5 +72,5 @@ public class RentalCar {
     }
 
     @Override
-    public String toString(){return this.name + ", " + this.id;}
+    public String toString(){return this.id + ", " + this.name;}
 }
