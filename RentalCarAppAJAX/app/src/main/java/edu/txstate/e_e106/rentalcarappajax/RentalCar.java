@@ -13,14 +13,22 @@ public class RentalCar {
     public RentalCar(JSONObject carObject){
 
         try{
-            this.id = carObject.getInt("car_id");
-            this.name = carObject.getString("car_name");
-            this.brand = carObject.getString("car_brand");
-            this.color = carObject.getString("car_color");
-            this.rentCost = carObject.getDouble("car_rent");
+            this.id = carObject.getInt("id");
+            this.name = carObject.getString("name");
+            this.brand = carObject.getString("brand");
+            this.color = carObject.getString("color");
+            this.rentCost = carObject.getDouble("rent");
         }
         catch(Exception ex){ex.printStackTrace();}
 
+    }
+
+    public RentalCar(int id, String name, String brand, String color, double rentCost) {
+        this.id = id;
+        this.name = name;
+        this.brand = brand;
+        this.color = color;
+        this.rentCost = rentCost;
     }
 
     public int getId() {
@@ -62,4 +70,7 @@ public class RentalCar {
     public void setRentCost(double rentCost) {
         this.rentCost = rentCost;
     }
+
+    @Override
+    public String toString(){return this.name + ", " + this.id;}
 }
