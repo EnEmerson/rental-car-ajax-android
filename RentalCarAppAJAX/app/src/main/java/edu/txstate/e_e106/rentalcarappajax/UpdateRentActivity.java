@@ -52,8 +52,17 @@ public class UpdateRentActivity extends AppCompatActivity {
                 String url = "rental-cars/" +updateCarPosition+ "/rent.json";
                 StringEntity entity = null;
                 try {
-                    float newRent = Float.parseFloat(rentalCostInput.getText().toString());
-                    entity = new StringEntity("" + twoDecimalPlaces.format(newRent));
+                    String rentText = rentalCostInput.getText().toString();
+                    float newRent;
+
+                    if(rentText.equals("")) {
+                        Toast.makeText(UpdateRentActivity.this, "Please enter a rental cost.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }else {
+                        newRent = Float.parseFloat(rentText);
+                        entity = new StringEntity("" + twoDecimalPlaces.format(newRent));
+                    }
+
                 }  catch(Exception ex) {
                     ex.printStackTrace();
                 }
