@@ -5,7 +5,7 @@ A demo Rental Car app for Android using Firebase and AJAX restful apis
 
 [My firebase for the rental cars](https://android-dev-spring-2019.firebaseio.com/rental-cars.json)
 
-### Common 'meta-data' related issues:
+## Common 'meta-data' related issues:
 
 * Make sure the ```app/manifests/AndroidManifest.xml``` file contains the correct ```<uses-permission>``` It looks like this:
 
@@ -56,7 +56,7 @@ Android Rental Car Constructor:
     }
 ```
 
-#### As you can see, the attributes in the JSON match the attributes (in quotes) in the Java object.
+### As you can see, the attributes in the JSON match the attributes (in quotes) in the Java object.
 ---
 
 ![assignment-info](https://github.com/EnEmerson/rental-car-ajax-android/blob/master/resources/assignment-info.png)
