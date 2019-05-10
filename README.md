@@ -5,6 +5,8 @@ A demo Rental Car app for Android using Firebase and AJAX restful apis
 
 [My firebase for the rental cars](https://android-dev-spring-2019.firebaseio.com/rental-cars.json)
 
+**Make sure the "Rules" for ```.read``` and ```.write``` are both set to ```true``` on your database.**
+
 ## Common 'meta-data' related issues:
 
 * Make sure the ```app/manifests/AndroidManifest.xml``` file contains the correct ```<uses-permission>``` It looks like this:
